@@ -43,6 +43,7 @@
             this.tbPwr = new System.Windows.Forms.TextBox();
             this.tbKey = new System.Windows.Forms.TextBox();
             this.tbRoof = new System.Windows.Forms.TextBox();
+            this.btnCreateDir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnExit
@@ -72,6 +73,7 @@
             this.cmbBts.Name = "cmbBts";
             this.cmbBts.Size = new System.Drawing.Size(121, 21);
             this.cmbBts.TabIndex = 0;
+            this.cmbBts.SelectedIndexChanged += new System.EventHandler(this.cmbBts_SelectedIndexChanged);
             // 
             // tbName
             // 
@@ -173,11 +175,22 @@
             this.tbRoof.TabIndex = 12;
             this.tbRoof.Text = "Выход на крышу";
             // 
+            // btnCreateDir
+            // 
+            this.btnCreateDir.Location = new System.Drawing.Point(535, 590);
+            this.btnCreateDir.Name = "btnCreateDir";
+            this.btnCreateDir.Size = new System.Drawing.Size(75, 23);
+            this.btnCreateDir.TabIndex = 52;
+            this.btnCreateDir.Text = "create dir";
+            this.btnCreateDir.UseVisualStyleBackColor = true;
+            this.btnCreateDir.Click += new System.EventHandler(this.btnCreateDir_Click);
+            // 
             // fRc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1155, 643);
+            this.Controls.Add(this.btnCreateDir);
             this.Controls.Add(this.tbRoof);
             this.Controls.Add(this.tbKey);
             this.Controls.Add(this.tbPwr);
@@ -218,5 +231,6 @@
         private System.Windows.Forms.TextBox tbPwr;
         private System.Windows.Forms.TextBox tbKey;
         private System.Windows.Forms.TextBox tbRoof;
+        private System.Windows.Forms.Button btnCreateDir;
     }
 }
